@@ -1,0 +1,296 @@
+/* CSS */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    font-size: 15px;
+    scroll-behavior: smooth;
+}
+
+
+/*Đầu Trang */
+
+#main {}
+
+#main .nav {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    letter-spacing: 4px;
+    height: 60px;
+    background-color: #fff;
+    padding: 8px 16px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.nav .nav-left {
+    float: left;
+    color: #000;
+    padding: 8px 16px;
+    display: block;
+    text-decoration: none;
+}
+
+.nav .nav-right {
+    float: right;
+}
+
+.nav-right .nav-content {
+    color: #000;
+    padding: 8px 16px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.nav-right .nav-content:hover,
+.nav-left:hover {
+    background: #ccc;
+    cursor: pointer;
+}
+
+.menu-btn {
+    display: none;
+}
+
+
+/* CSS img */
+
+.img-nav {
+    position: relative;
+    background: url(img/architect.jpg) top center / cover no-repeat;
+    padding-top: 50%;
+}
+
+.img-nav .text-img {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%);
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+}
+
+.text-img .br-text {
+    background: #000;
+    padding: 8px 16px;
+    opacity: 0.6;
+}
+
+.text-img .ar-text {
+    font-weight: 400;
+}
+
+
+/* General */
+
+.clear {
+    clear: both;
+    content: "";
+}
+
+
+/* Giữa trang */
+
+#middle {
+    padding: 8px 16px;
+}
+
+#middle .project {
+    padding: 32px 16px;
+}
+
+.project .text-h3 {
+    margin: 10px 0;
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: 400;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/*  */
+
+.content-middle {
+    display: inline-flex;
+    padding: 8px 16px;
+}
+
+.content-middle .row-content {
+    width: calc(100%/4);
+    float: left;
+    display: block;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    position: relative;
+}
+
+.row-content .text-row {
+    position: absolute;
+    padding: 8px 16px;
+    background: #000;
+    color: #fff;
+}
+
+.row-content .img-row {
+    width: 100%;
+}
+
+.row-content .img-row:hover {
+    opacity: 0.6;
+}
+
+
+/*  */
+
+.project .p-about {
+    margin: 10px 0;
+}
+
+.container-about {
+    padding: 8px 16px;
+}
+
+.container-about .img-about {
+    width: calc(100%/4);
+    float: left;
+    padding: 0 8px;
+    margin-bottom: 16px;
+}
+
+.img-about img {
+    width: 100%;
+    filter: brightness(0.5);
+}
+
+.img-about img:hover {
+    filter: brightness(1);
+}
+
+.img-about h3 {
+    font-weight: 400;
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.img-about .p-about {
+    opacity: 0.6;
+    margin: 15px 0;
+}
+
+.img-about p {
+    margin: 15px 0;
+}
+
+.img-about .btn-about {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    font-size: 15px;
+    background: #f1f1f1;
+}
+
+.img-about .btn-about:hover {
+    background: #ccc;
+    cursor: pointer;
+}
+
+
+/*  */
+
+.project p {
+    margin: 15px 0;
+}
+
+.input-contact {
+    border: 1px solid #ccc;
+    padding: 11px;
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.btn-contact {
+    color: #fff;
+    background: #000;
+    border: none;
+    margin: 16px 0;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    font-size: 15px;
+}
+
+.btn-contact:hover {
+    background: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+
+/* */
+
+.footer-img {
+    padding: 15px 16px;
+}
+
+.img-footer {
+    width: 100%;
+    height: auto;
+}
+
+.footer-text {
+    text-align: center;
+}
+
+.footer-text p {
+    margin: 15px 0;
+}
+
+
+/* Cuối trang */
+
+
+/* Responsive */
+
+@media (max-width:740px) {
+    .nav .nav-right {
+        display: none;
+    }
+    .content-middle {
+        display: block;
+    }
+    .content-middle .row-content {
+        width: 100%;
+    }
+    .container-about .img-about {
+        width: 100%;
+    }
+    /* menu */
+    .nav {
+        position: relative;
+    }
+    .menu-btn {
+        display: block;
+        float: right;
+        line-height: 60px;
+        /* position: absolute;
+        right: 0;
+        line-height: 60px;
+        letter-spacing: normal;
+        padding-right: 16px; */
+    }
+    .menu-btn .menu-icon {
+        font-size: 30px;
+        opacity: 0.6;
+    }
+    .menu-btn .menu-icon:hover {
+        opacity: 1;
+    }
+}
